@@ -59,10 +59,11 @@ function combineScenery() {
     const div = document.createElement('div');
     div.append(generateScenery('assets/sky.png',50));
     div.append(generateScenery('assets/grass.png',50))
-    const backgroundContainer = document.getElementById('m');
-    backgroundContainer.append(combineScenery());
-    backgroundContainer.append(combineScenery());
-    backgroundContainer.style.position = 'fixed';
-    backgroundContainer.style.bottom = '-4px';
+    return div;
 
 }
+const backgroundContainer = document.getElementById('m');
+backgroundContainer.append(combineScenery());
+backgroundContainer.append(combineScenery());
+backgroundContainer.style.position = 'fixed';
+backgroundContainer.style.bottom = '-4px';
