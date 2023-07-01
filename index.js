@@ -14,7 +14,6 @@ const generateScenery = (src, length) => {
     for (let element of array) {
        div.append(element);
     }
-    //document.body.append(div);
     return div;
 }
 
@@ -60,10 +59,10 @@ function combineScenery() {
     const div = document.createElement('div');
     div.append(generateScenery('assets/sky.png',50));
     div.append(generateScenery('assets/grass.png',50))
-    return div;
+    const backgroundContainer = document.getElementById('m');
+    backgroundContainer.append(combineScenery());
+    backgroundContainer.append(combineScenery());
+    backgroundContainer.style.position = 'fixed';
+    backgroundContainer.style.bottom = '-4px';
 
 }
-document.getElementById('m').append(combineScenery());
-document.getElementById('m').append(combineScenery());
-document.getElementById('m').style.position = 'fixed';
-document.getElementById('m').style.bottom = '-4px';
